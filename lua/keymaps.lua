@@ -63,11 +63,13 @@ map('n', '<leader>h', ':ColorizerToggle<CR>', { noremap = true, silent = true })
 -- neorg
 map('n', '<leader>nn', ':PackerLoad nvim-cmp neorg<CR>:e ~/dox/.notes/index.norg<CR>', { noremap = true, silent = true })
 map('n', '<leader>nt', ':PackerLoad nvim-cmp neorg<CR>:e ~/dox/.todo/index.norg<CR>', { noremap = true, silent = true })
--- lspinstall
-map('n', '<leader>lm', ':LspInstallInfo<CR>', { noremap = true, silent = true })
+--lsp
 map('n', '<leader>lc', ':lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })
 map('n', '<leader>ln', ':lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
 map('n', '<leader>lp', ':lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
+map('n', '<c-n>', ':lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
+map('n', '<c-p>', ':lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
+map('n', '<leader>lm', ':LspInstallInfo<CR>', { noremap = true, silent = true })
 
 
 -- BINDINGS
