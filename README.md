@@ -1,17 +1,17 @@
-# Jent 🎩
+# JENT 🎩
 
 **J**ust **E**nough **N**ice **T**hings
 
-Jent is an aesthetically minimal and lightning fast Neovim configuration with just enough niceties to be easy to work with.
+JENT is an aesthetically minimal and lightning fast Neovim configuration with just enough niceties to be easy to work with.
 
 It's made for note-taking, LaTeX editing and a little light coding.
 
 ## Philosophy
 
-- A guest on your system, Jent won't eat you out of house and home. No resource-munching fripperies.
-- Ever tactful, Jent doesn't bore you by talking endlessly about himself. You'll find no branded dashboard here.
-- Jent doesn't get in your way: there is no configuration framework between you and Neovim.
-- Always willing to help, Jent puts the things you need just a few keypresses away.
+- A guest on your system, JENT won't eat you out of house and home. No resource-munching fripperies.
+- Ever tactful, JENT doesn't bore you by talking endlessly about himself. You'll find no branded dashboard here.
+- JENT doesn't get in your way: there is no configuration framework between you and Neovim.
+- Always willing to help, JENT puts the things you need just a few keypresses away.
 
 ## Installation
 
@@ -37,4 +37,4 @@ Just run:
 git -C ${XDG_CONFIG_HOME:-$HOME/.config}/nvim pull
 ```
 
-Jent binds this to `<leader>j`
+JENT binds this to `<leader>j` so you can update from Neovim.
