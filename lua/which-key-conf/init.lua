@@ -77,6 +77,8 @@ require("which-key").setup {
 
 	require("which-key").register({ p = "Update plugins" }, { prefix = "<leader>" }),
 
+	require("which-key").register({ j = "Update Jent" }, { prefix = "<leader>" }),
+
 	require("which-key").register({ h = "Toggle highlighting css colours" }, { prefix = "<leader>" }),
 
 	require("which-key").register({ u = "Toggle visual undo" }, { prefix = "<leader>" }),

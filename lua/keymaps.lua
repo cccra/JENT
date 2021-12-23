@@ -67,7 +67,14 @@ map('n', '<leader>nt', ':PackerLoad nvim-cmp neorg<CR>:e ~/dox/.todo/index.norg<
 
 -- BINDINGS
 
--- Change current word changed to ss to avoid vim-sandwich conflict
+-- update Jent config
+function UpdateJent()
+	print("Downloading the latest Jent...")
+	vim.cmd("!git -C ${XDG_CONFIG_HOME:-$HOME/.config}/nvim pull")
+end
+map('n', '<leader>j', ':lua UpdateJent()<CR>', { noremap = true, silent = true })
+
+-- Change current character changed to ss to avoid vim-sandwich conflict
 map('n', 'ss', 's', { noremap = true })
 
 -- Replace all is aliased to S
