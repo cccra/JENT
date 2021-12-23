@@ -42,8 +42,14 @@ require("which-key").setup {
     	},
 	}, { prefix = "<leader>" }),
 
-	require("which-key").register({ l = "Switch horizontal-vertical layout" },
-	{ prefix = "<leader>" }),
+	require("which-key").register({ l = {
+		name = 'LSP',
+		m = 'Manage installed servers',
+		c = 'Information about object under cursor',
+		n = 'Go to next LPS warning',
+		p = 'Go to previous LPS warning',
+		},
+	}, { prefix = "<leader>" }),
 
 	require("which-key").register({ t = {
     	name = "Templates",
