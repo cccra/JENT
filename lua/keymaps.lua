@@ -138,19 +138,6 @@ map('n', '<C-Right>', ':vertical resize -3<CR>', { noremap = true, silent = true
 map('n', '<C-Up>', ':resize +3<CR>', { noremap = true, silent = true })
 map('n', '<C-Down>', ':resize -3<CR>', { noremap = true, silent = true })
 
--- Change 2 split windows from vertical to horizontal or horizontal to vertical
-vim.cmd([[
-function! LayoutToggle() " {{{
-	let layout = winlayout()[0]
-	if layout == "row"
-		windo wincmd J
-	elseif layout == "col"
-		windo wincmd H
-	endif
-endfunction
-]])-- }}}
-map('n', '<leader>l', ':call<Space>LayoutToggle()<CR>', { noremap = true, silent = true })
-
 -- Tabs
 map('n', '<leader><Tab>n', ':tabnew<CR>', { noremap = true, silent = true })
 map('n', '<leader><Tab>e', ":tabnew<CR>:lua require('telescope.builtin').find_files({no_ignore = true})<CR>", { noremap = true, silent = true })
