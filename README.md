@@ -26,7 +26,7 @@ mv ${XDG_CONFIG_HOME:-$HOME/.config}/nvim ${XDG_CONFIG_HOME:-$HOME/.config}/nvim
 ... and then clone this repo in its place.
 
 ```sh
-git clone --depth 1 https://gitlab.com/cccra/jent-nvim.git ${XDG_CONFIG_HOME:-$HOME/.config}/nvim
+git clone --depth 1 https://gitlab.com/cccra/jent.git ${XDG_CONFIG_HOME:-$HOME/.config}/nvim
 ```
 
 ## Updating
