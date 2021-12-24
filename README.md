@@ -26,15 +26,13 @@ Make sure you have Neovim 6.0 or later installed, then backup your old config
 (if you have one)...
 
 ```sh
-mv ${XDG_CONFIG_HOME:-$HOME/.config}/nvim
-${XDG_CONFIG_HOME:-$HOME/.config}/nvim.bak
+mv ${XDG_CONFIG_HOME:-$HOME/.config}/nvim ${XDG_CONFIG_HOME:-$HOME/.config}/nvim.bak
 ```
 
 ... and then clone this repo in its place.
 
 ```sh
-git clone --depth 1 https://gitlab.com/cccra/jent.git
-${XDG_CONFIG_HOME:-$HOME/.config}/nvim
+git clone --depth 1 https://gitlab.com/cccra/jent.git ${XDG_CONFIG_HOME:-$HOME/.config}/nvim
 ```
 
 The next time you run Neovim use `nvim +PackerSync`. This will install the
