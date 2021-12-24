@@ -60,6 +60,8 @@ git clone --depth 1 https://gitlab.com/cccra/jent.git ${XDG_CONFIG_HOME:-$HOME/.
 The next time you run Neovim use the command `nvim +PackerSync`. This will
 install the required plugins.
 
+If perchance this is your first time using a vi-like editor, definitely take a look at Neovim's built-in tutorial (`:Tutor`).
+
 ## Updating
 
 Just run:
