@@ -21,6 +21,26 @@ It's made for note-taking, LaTeX editing and a little light coding.
   cumbersome, JENT leaves it as it is. No mappings for save and quit, thank you
   very much.
 
+## Features
+
+- Sane (according to yours truly) defaults
+- Handy shortcuts
+- A custom colourscheme (tinker at will)
+- A small and functional set of configured and lazy-loaded plugins
+
+Of those plugins, the interesting ones are listed below in alphabetical order:
+
+- comment.nvim: automatically comment anything
+- mundo: utilise Neovim's branching undo history
+- neogit: easily manage git from Neovim
+- neorg: note-taking and todo
+- nvim-cmp: code completion
+- nvim-lsp-installer: manage language servers from Neovim
+- telescope.nvim: fuzzy find anything
+- treesitter: consistent highlighting across languages
+- vim-sandwich: easily add, remove and change brackets etc.
+- which-key: an interactive prompt for keybindings
+
 ## Installation
 
 Installation takes a jiffy.
