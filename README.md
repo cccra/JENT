@@ -35,7 +35,6 @@ Of those plugins, the interesting ones are listed below in alphabetical order:
 - neogit: easily manage git from Neovim
 - neorg: note-taking and todo
 - nvim-cmp: code completion
-- nvim-lsp-installer: manage language servers from Neovim
 - telescope.nvim: fuzzy find anything
 - treesitter: consistent highlighting across languages
 - vim-sandwich: easily add, remove and change brackets etc.
