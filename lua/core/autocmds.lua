@@ -24,9 +24,9 @@ vim.cmd("autocmd BufRead,BufNewFile *.norg set filetype=norg")
 vim.cmd("autocmd TermOpen * setlocal nonumber norelativenumber")
 
 -- Load snippets
-vim.cmd("autocmd FileType tex lua require('snippets.tex') require('which-key-conf.texkeys')")
-vim.cmd("autocmd FileType html lua require('snippets.html') require('which-key-conf.htmlkeys')")
-vim.cmd("autocmd FileType groff lua require('snippets.ms') require('which-key-conf.groffkeys')")
+vim.cmd("autocmd FileType tex lua require('core.snippets.tex') require('plugins.which-key-conf.texkeys')")
+vim.cmd("autocmd FileType html lua require('core.snippets.html') require('plugins.which-key-conf.htmlkeys')")
+vim.cmd("autocmd FileType groff lua require('core.snippets.ms') require('plugins.which-key-conf.groffkeys')")
 vim.cmd("autocmd BufRead *.tex syntax enable")
 vim.cmd("autocmd InsertEnter *.tex set conceallevel=0")
 vim.cmd("autocmd InsertLeave *.tex set conceallevel=2")
