@@ -17,7 +17,7 @@ It's made for note-taking, LaTeX editing and a little light coding.
 
 Installation takes a jiffy.
 
-Back your old config up (if you have one)...
+Make sure you have Neovim 6.0 or later installed, then backup your old config (if you have one)...
 
 ```sh
 mv ${XDG_CONFIG_HOME:-$HOME/.config}/nvim ${XDG_CONFIG_HOME:-$HOME/.config}/nvim.bak
