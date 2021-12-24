@@ -30,15 +30,15 @@ It's made for note-taking, LaTeX editing and a little light coding.
 
 Of those plugins, the interesting ones are listed below in alphabetical order:
 
-- comment.nvim: automatically comment anything
-- mundo: utilise Neovim's branching undo history
-- neogit: easily manage git from Neovim
-- neorg: note-taking and todo
-- nvim-cmp: code completion
-- telescope.nvim: fuzzy find anything
-- treesitter: consistent highlighting across languages
-- vim-sandwich: easily add, remove and change brackets etc.
-- which-key: an interactive prompt for keybindings
+- [comment.nvim](https://github.com/numToStr/Comment.nvim): automatically comment anything
+- [vim-mundo](https://github.com/simnalamburt/vim-mundo): utilise Neovim's branching undo history
+- [neogit](https://github.com/TimUntersberger/neogit): easily manage git from Neovim
+- [neorg](https://github.com/nvim-neorg/neorg): note-taking and todo
+- [nvim-cmp](http://neovimcraft.com/plugin/hrsh7th/nvim-cmp/index.html): code completion
+- [telescope.nvim](https://github.com/nvim-telescope/telescope.nvim): fuzzy find anything
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): consistent highlighting across languages
+- [vim-sandwich](https://github.com/machakann/vim-sandwich): easily add, remove and change brackets etc.
+- [which-key.nvim](https://github.com/folke/which-key.nvim): an interactive prompt for keybindings
 
 ## Installation
 
