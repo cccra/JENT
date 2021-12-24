@@ -46,8 +46,8 @@ require("which-key").setup {
 		name = 'LSP',
 		m = 'Manage installed servers',
 		c = 'Information about object under cursor',
-		n = 'Go to next LPS warning',
-		p = 'Go to previous LPS warning',
+		n = 'Go to next LSP warning',
+		p = 'Go to previous LSP warning',
 		},
 	}, { prefix = "<leader>" }),
 
