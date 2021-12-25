@@ -121,7 +121,7 @@ function BackgroundToggle()
 	else
 		vim.g.gruvpops_clearbg = 0
 	end
-	vim.cmd("luafile ~/.config/nvim/lua/colours.lua")
+	vim.cmd("luafile ~/.config/nvim/lua/core/colours.lua")
 end
 map('n', '<leader>k', ':lua BackgroundToggle()<CR>', { noremap = true, silent = true })
 
