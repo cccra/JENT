@@ -85,9 +85,6 @@ use {'lukas-reineke/indent-blankline.nvim',-- Visual indentation guide
 }
 use {'simnalamburt/vim-mundo',-- Graphical undo
 	cmd = 'MundoToggle',
-	config = function()
-		require('plugins.mundo')
-	end
 }
 use {'folke/which-key.nvim',-- Key binding hints
 	keys = {'<leader>', '`', "'", '"', 'z', 'g'},
