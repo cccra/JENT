@@ -33,9 +33,7 @@ use {'machakann/vim-sandwich',-- Quickly surround text objects with parentheses,
 }
 use {'RRethy/vim-illuminate',-- highlight matching parentheses
 	ft = {'python', 'sh', 'bash', 'tex', 'lua', 'css', 'html', 'cpp'},
-	config = function()
-		require('plugins.illuminate')
-	end
+	config = 'vim.g.Illuminate_delay = 70'
 }
 use {'neovim/nvim-lspconfig',-- Language server linting and fixing
 	ft = {'python', 'sh', 'bash', 'tex', 'lua', 'css', 'html', 'cpp'},
