@@ -45,7 +45,7 @@ function EditConfig()
 	end
 	vim.cmd("lua require('telescope.builtin').find_files({prompt_title = 'Vim Config', cwd = '~/.config/nvim/'})")
 end
-map('n', '<leader>ff', ":lua require('telescope.builtin').find_files({find_command = {'rg', '--files', '--hidden', '--no-ignore', '--ignore-file', '.config/nvim/lua/telescope-conf/ignore'}})<CR>", { noremap = true, silent = true })
+map('n', '<leader>ff', ":lua require('telescope.builtin').find_files({find_command = {'rg', '--files', '--hidden', '--no-ignore', '--ignore-file', '.config/nvim/lua/plugins/telescope/ignore'}})<CR>", { noremap = true, silent = true })
 map('n', '<leader>fb', ":lua require('telescope.builtin').buffers()<CR>", { noremap = true, silent = true })
 map('n', '<leader>fs', ":lua require('telescope.builtin').live_grep()<CR>", { noremap = true, silent = true })
 map('n', '<leader>fr', ":lua require('telescope.builtin').oldfiles()<CR>", { noremap = true, silent = true })
