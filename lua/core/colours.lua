@@ -230,18 +230,6 @@ highlight('htmlH6', colors.h6, nil, nil, nil)
 -- IndentBlankine {{{
 highlight('IndentBlanklineChar', '#484646', nil, nil, nil)
 --}}}
--- Netrw {{{
-highlight('netrwDir', colors.aqua, nil, nil, nil)
-highlight('netrwClassify', colors.aqua, nil, nil, nil)
-highlight('netrwLink', colors.gray, nil, nil, nil)
-highlight('netrwSymLink', colors.fg0, nil, nil, nil)
-highlight('netrwExe', colors.yellow, nil, nil, nil)
-highlight('netrwComment', colors.gray, nil, nil, nil)
-highlight('netrwList', colors.blue, nil, nil, nil)
-highlight('netrwHelpCmd', colors.aqua, nil, nil, nil)
-highlight('netrwCmdSep', colors.fg1, nil, nil, nil)
-highlight('netrwVersion', colors.green, nil, nil, nil)
---}}}
 -- Neorg {{{
 highlight('Heading1', colors.h1, nil, 'bold', nil)
 highlight('Heading2', colors.h2, nil, 'bold', nil)
