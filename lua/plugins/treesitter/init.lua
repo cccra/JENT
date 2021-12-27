@@ -26,6 +26,6 @@ parser_configs.norg_table = {
 
 require'nvim-treesitter.configs'.setup {
 	highlight = { enable = true, },
-	indent = { enable = false, },
+	indent = { enable = true, },
 	ensure_installed = { 'lua', 'latex', 'bibtex', 'bash', 'python', 'cpp', 'html', 'css', 'comment', 'norg', 'norg_meta', 'norg_table'},
 }
