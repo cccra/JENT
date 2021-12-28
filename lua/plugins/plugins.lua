@@ -98,7 +98,7 @@ use { 'nvim-neorg/neorg',
     config = function()
         require('plugins.neorg')
     end,
-    requires = {'nvim-lua/plenary.nvim', 'nvim-neorg/neorg-telescope'},
 	after = {'nvim-treesitter', 'nvim-cmp'}
+    requires = 'nvim-lua/plenary.nvim',
 }
 end)

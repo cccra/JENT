@@ -26,7 +26,6 @@ require('neorg').setup {
 				neorg_leader = '<leader>n'
 			}
 		},
-		-- ['core.integrations.telescope'] = {},
 		['core.integrations.treesitter'] = {
 			config = {
 				highlights = {
