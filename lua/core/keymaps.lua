@@ -147,10 +147,10 @@ map('n', '<leader><Tab>c', ':tabclose<Space><CR>', { noremap = true, silent = tr
 map('n', '<leader><Tab>o', ':tabonly<CR>', { noremap = true, silent = true })
 
 -- Import a template
-map('n', '<leader>tl', ':-1read<Space>$HOME/.local/share/templates/article.tex<CR>:set<Space>filetype=tex<CR>/^\\\\title<CR>f{a', { noremap = true, silent = true })
-map('n', '<leader>tb', ':-1read<Space>$HOME/.local/share/templates/beamer.tex<CR>:set<Space>filetype=tex<CR>/^\\\\title<CR>f{a', { noremap = true, silent = true })
-map('n', '<leader>tg', ':-1read<Space>$HOME/.local/share/templates/article.ms<CR>:set<Space>filetype=groff<CR>/^\\.TL<CR>ji', { noremap = true, silent = true })
-map('n', '<leader>th', ':-1read<Space>$HOME/.local/share/templates/file.html<CR>:set<Space>filetype=html<CR>3jf>a', { noremap = true, silent = true })
+map('n', '<leader>tl', ':-1read<Space>${XDG_CONFIG_HOME:-$HOME/.config}/nvim/templates/article.tex<CR>:set<Space>filetype=tex<CR>/^\\\\title<CR>f{a', { noremap = true, silent = true })
+map('n', '<leader>tb', ':-1read<Space>${XDG_CONFIG_HOME:-$HOME/.config}/nvim/templates/beamer.tex<CR>:set<Space>filetype=tex<CR>/^\\\\title<CR>f{a', { noremap = true, silent = true })
+map('n', '<leader>tg', ':-1read<Space>${XDG_CONFIG_HOME:-$HOME/.config}/nvim/templates/article.ms<CR>:set<Space>filetype=groff<CR>/^\\.TL<CR>ji', { noremap = true, silent = true })
+map('n', '<leader>th', ':-1read<Space>${XDG_CONFIG_HOME:-$HOME/.config}/nvim/templates/file.html<CR>:set<Space>filetype=html<CR>3jf>a', { noremap = true, silent = true })
 
 -- Fix annoyances
 
