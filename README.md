@@ -21,6 +21,9 @@ It's made for note-taking, LaTeX editing and a little light coding.
   cumbersome, JENT leaves it as it is. No mappings for save and quit, thank you
   very much.
 
+## The obligatory GIF
+![](https://gitlab.com/cccra/jent/uploads/e34d0b2441f9dc0b50cb9266c8360242/output3.gif)
+
 ## Features
 
 - Sane (according to yours truly) defaults
