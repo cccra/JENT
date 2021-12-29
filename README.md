@@ -7,6 +7,9 @@ just enough niceties to be easy to work with.
 
 It's made for note-taking, LaTeX editing and a little light coding.
 
+## The obligatory GIF
+![a gif](https://gitlab.com/cccra/jent/uploads/25fa1034c508617abfe95832f685b1a6/output3.gif)
+
 ## Philosophy
 
 - A guest on your system, JENT won't eat you out of house and home. No
@@ -20,9 +23,6 @@ It's made for note-taking, LaTeX editing and a little light coding.
 - JENT bows before superior wisdom and experience: if the Vim way isn't too
   cumbersome, JENT leaves it as it is. No mappings for save and quit, thank you
   very much.
-
-## The obligatory GIF
-![a gif](https://gitlab.com/cccra/jent/uploads/25fa1034c508617abfe95832f685b1a6/output3.gif)
 
 ## Features
 
