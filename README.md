@@ -22,7 +22,7 @@ It's made for note-taking, LaTeX editing and a little light coding.
   very much.
 
 ## The obligatory GIF
-![](https://gitlab.com/cccra/jent/uploads/e34d0b2441f9dc0b50cb9266c8360242/output3.gif)
+![a gif](https://gitlab.com/cccra/jent/uploads/25fa1034c508617abfe95832f685b1a6/output3.gif)
 
 ## Features
 
