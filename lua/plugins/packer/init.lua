@@ -8,7 +8,7 @@ end
 require('packer').startup(function()
 use {'wbthomason/packer.nvim',
 	cmd = 'Packer*',
-	config = function() require('plugins.plugins') end
+	config = function() require('plugins.packer') end
 	}
 use {'nvim-telescope/telescope.nvim',-- Fuzzy find files
 	keys = '<leader>f',
