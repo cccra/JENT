@@ -36,11 +36,6 @@ vim.o.statusline = ' %<%f %r %m %= %y %3.3p%% %3.3c%( %)'
 -- Set the content of the ruler
 vim.o.rulerformat = '%#Comment#%= %m %3.3p%% %3.3c'
 
--- Netrw
-vim.g.netrw_banner = 0
-vim.g.netrw_list_hide = 'snap,.git,.npm,.cache,.dbus,.nordnm,.android,.audacity-data,.pki,.pylint.d,.rnd,.mozilla'
-vim.g.netrw_hide = 1
-
 local disabled_built_ins = {
    "2html_plugin",
    "getscript",
