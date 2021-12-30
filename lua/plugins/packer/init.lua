@@ -1,8 +1,8 @@
 local install_path = vim.fn.stdpath('data')..'/site/pack/packer/opt/packer.nvim'
 
 if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-  vim.cmd('!git clone https://github.com/wbthomason/packer.nvim '..install_path)
-  vim.cmd('packadd packer.nvim')
+	INITIAL_INSTALL=vim.fn.system{'git', 'clone', 'https://github.com/wbthomason/packer.nvim', install_path}
+	vim.cmd('packadd packer.nvim')
 end
 
 require('packer').startup(function()
@@ -81,4 +81,5 @@ use { 'nvim-neorg/neorg',
     requires = 'nvim-lua/plenary.nvim',
 	after = {'nvim-treesitter', 'nvim-cmp'},
 }
+if INITIAL_INSTALL then require("packer").update() end
 end)
