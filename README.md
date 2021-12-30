@@ -28,7 +28,8 @@ It's made for note-taking, LaTeX editing and a little light coding.
 
 - Sane (according to yours truly) defaults
 - Handy shortcuts
-- A custom colourscheme (tinker at will)
+- Loads of LaTeX snippets
+- A custom colourscheme
 - A small and functional set of configured and lazy-loaded plugins
 
 Of those plugins, the interesting ones are listed below in alphabetical order:
