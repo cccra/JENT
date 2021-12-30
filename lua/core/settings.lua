@@ -38,6 +38,7 @@ vim.o.rulerformat = '%#Comment#%= %m %3.3p%% %3.3c'
 
 local disabled_built_ins = {
    "2html_plugin",
+   "fzf",
    "getscript",
    "getscriptPlugin",
    "gzip",
