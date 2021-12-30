@@ -58,7 +58,7 @@ vim.cmd("autocmd BufWritePost bm-files,bm-dirs !shortcuts")
 vim.cmd("autocmd BufWritePost dunstrc !killall -q dunst;setsid dunst &")
 
 -- Recompile packer on save
-vim.cmd("autocmd BufWritePost ~/.config/nvim/lua/plugins.lua so | PackerCompile | lua print('Recompiled')")
+vim.cmd("autocmd BufWritePost ~/.config/nvim/lua/plugins/packer/init.lua so | PackerCompile | lua print('Recompiled')")
 
 -- Disables automatic commenting on newline
 vim.cmd("autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o")
