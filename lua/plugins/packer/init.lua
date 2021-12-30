@@ -81,5 +81,5 @@ use { 'nvim-neorg/neorg',
     requires = 'nvim-lua/plenary.nvim',
 	after = {'nvim-treesitter', 'nvim-cmp'},
 }
-if INITIAL_INSTALL then require("packer").update() end
+if INITIAL_INSTALL then require("packer").sync() end
 end)
