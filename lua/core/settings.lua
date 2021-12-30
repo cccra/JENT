@@ -41,6 +41,23 @@ vim.g.netrw_banner = 0
 vim.g.netrw_list_hide = 'snap,.git,.npm,.cache,.dbus,.nordnm,.android,.audacity-data,.pki,.pylint.d,.rnd,.mozilla'
 vim.g.netrw_hide = 1
 
-local disabled_built_ins = { "gzip", "zip", "zipPlugin", "tar", "tarPlugin", "getscript", "getscriptPlugin", "vimball", "vimballPlugin", "2html_plugin", "logipat", "rrhelper" }
+local disabled_built_ins = {
+   "2html_plugin",
+   "getscript",
+   "getscriptPlugin",
+   "gzip",
+   "logipat",
+   "netrw",
+   "netrwPlugin",
+   "netrwSettings",
+   "netrwFileHandlers",
+   "tar",
+   "tarPlugin",
+   "rrhelper",
+   "vimball",
+   "vimballPlugin",
+   "zip",
+   "zipPlugin",
+}
 
-for plugin in pairs(disabled_built_ins) do vim.g["loaded" .. plugin] = 1 end
+for _, plugin in pairs(disabled_built_ins) do vim.g["loaded_" .. plugin] = 1 end
