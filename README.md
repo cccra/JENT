@@ -60,13 +60,15 @@ mv ${XDG_CONFIG_HOME:-$HOME/.config}/nvim ${XDG_CONFIG_HOME:-$HOME/.config}/nvim
 git clone --depth 1 https://gitlab.com/cccra/jent.git ${XDG_CONFIG_HOME:-$HOME/.config}/nvim
 ```
 
-The next time you run Neovim use the command to install the required plugins:
+The next time you run Neovim after installing JENT use the following command to
+install the required plugins:
 
 ```sh
 nvim +"lua require('plugins.packer')"
 ```
 
-If perchance this is your first time using a vi-like editor, definitely take a look at Neovim's built-in tutorial (`:Tutor`).
+If perchance this is your first time using a vi-like editor, definitely take a
+look at Neovim's built-in tutorial (`:Tutor`).
 
 ## Updating
 
