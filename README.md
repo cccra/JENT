@@ -60,7 +60,7 @@ mv ${XDG_CONFIG_HOME:-$HOME/.config}/nvim ${XDG_CONFIG_HOME:-$HOME/.config}/nvim
 git clone --depth 1 https://gitlab.com/cccra/jent.git ${XDG_CONFIG_HOME:-$HOME/.config}/nvim
 ```
 
-The next time you run Neovim JENT will automatically install the plugins.
+The next time you run Neovim JENT will automatically install its plugins.
 
 If perchance this is your first time using a vi-like editor, definitely take a
 look at Neovim's built-in tutorial (`:Tutor`).
