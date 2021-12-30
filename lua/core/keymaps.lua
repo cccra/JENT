@@ -158,9 +158,6 @@ map('n', '<leader>th', ':-1read<Space>~/.config/nvim/templates/file.html<CR>:set
 	map('n', 'c', '"_c', { noremap = true })
 	map('n', 'C', '"_C', { noremap = true })
 
--- Fix Y so it operates from cursor to end of line, like the other capitals
-	map('n', 'Y', 'y$', { noremap = true, silent = true })
-
 -- Keep selection when indenting a visual block
 	map('v', '<', '<gv', { silent = true })
 	map('v', '>', '>gv', { silent = true })
