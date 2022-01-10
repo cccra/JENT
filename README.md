@@ -11,6 +11,7 @@ It's made for note-taking, LaTeX editing and a little light coding.
 ![a gif](https://gitlab.com/cccra/jent/uploads/25fa1034c508617abfe95832f685b1a6/output3.gif)
 
 Comes with loads of snippets for LaTeX:
+
 ![another gif](https://gitlab.com/cccra/jent/uploads/f04c40612f98eb1f51285cc4e6e02ea3/output1.gif)
 
 ## Philosophy
