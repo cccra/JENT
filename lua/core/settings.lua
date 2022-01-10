@@ -1,3 +1,4 @@
+vim.cmd[[filetype indent off]]
 vim.o.clipboard = vim.o.clipboard .. 'unnamedplus'
 vim.o.path = vim.o.path .. '**'
 vim.o.tabstop = 4

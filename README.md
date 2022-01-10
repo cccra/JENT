@@ -28,7 +28,8 @@ It's made for note-taking, LaTeX editing and a little light coding.
 
 - Sane (according to yours truly) defaults
 - Handy shortcuts
-- A custom colourscheme (tinker at will)
+- Loads of LaTeX snippets
+- A custom colourscheme
 - A small and functional set of configured and lazy-loaded plugins
 
 Of those plugins, the interesting ones are listed below in alphabetical order:
@@ -77,7 +78,7 @@ JENT binds this to `<leader>j` so you can update from Neovim.
 
 ## Aims
 
-I'll be honest, the primary reason I made this is because I use Neovim on more
+I'll be honest, the primary reason I made this is that I use Neovim on more
 machines than I have my Linux setup on, so it made sense to separate my nvim
 config from the rest of my dotfiles. That said, there's always the chance that
 an actual real person besides myself will see this and find it informative and
