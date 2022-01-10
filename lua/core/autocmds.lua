@@ -32,9 +32,9 @@ vim.cmd("autocmd InsertEnter *.tex set conceallevel=0")
 vim.cmd("autocmd InsertLeave *.tex set conceallevel=2")
 
 -- Auto-load my templates for relevant new files
-vim.cmd("autocmd BufNewFile *.tex silent -1read ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/templates/article.tex | %foldo | exec search('^\\\\title') | norm $")
-vim.cmd("autocmd BufNewFile *.html silent -1read ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/templates/file.html | exec search('title') | norm f<")
-vim.cmd("autocmd BufNewFile *.ms,*.me,*.mom,*.man silent -1read ${XDG_CONFIG_HOME:-$HOME/.config}/nvim/templates/article.ms | norm 2j")
+vim.cmd("autocmd BufNewFile *.tex silent -1read " .. vim.fn.stdpath('config') .. "/templates/article.tex | %foldo | exec search('^\\\\title') | norm $")
+vim.cmd("autocmd BufNewFile *.html silent -1read " .. vim.fn.stdpath('config') .. "/templates/file.html | exec search('title') | norm f<")
+vim.cmd("autocmd BufNewFile *.ms,*.me,*.mom,*.man silent -1read " .. vim.fn.stdpath('config') .. "/templates/article.ms | norm 2j")
 
 -- Automatically deletes all trailing whitespace and blank lines at end of file on save
 vim.cmd("autocmd BufWritePre * %s/\\s\\+$//e")
