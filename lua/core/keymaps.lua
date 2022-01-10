@@ -43,7 +43,7 @@ function EditConfig()
 	if not (vim.fn.join(vim.fn.getline(1,'$'), "\n") == "") then
 		vim.cmd("tabnew")
 	end
-	vim.cmd("lua require('telescope.builtin').find_files({prompt_title = 'Vim Config', cwd = '~/.config/nvim/'})")
+	vim.cmd("lua require('telescope.builtin').find_files({prompt_title = 'Vim Config', cwd = vim.fn.stdpath('config')})")
 end
 map('n', '<leader>ff', ":lua require('telescope.builtin').find_files({find_command = {'rg', '--files', '--hidden', '--no-ignore', '--ignore-file', '.config/nvim/lua/plugins/telescope/ignore'}})<CR>", { noremap = true, silent = true })
 map('n', '<leader>fb', ":lua require('telescope.builtin').buffers()<CR>", { noremap = true, silent = true })
@@ -70,6 +70,7 @@ map('n', '<leader>lp', ':lua vim.diagnostic.goto_prev()<CR>', { noremap = true, 
 map('n', '<c-n>', ':lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
 map('n', '<c-p>', ':lua vim.diagnostic.goto_prev()<CR>', { noremap = true, silent = true })
 map('n', '<leader>lm', ':LspInstallInfo<CR>', { noremap = true, silent = true })
+map('n', '<leader>li', ':LspInfo<CR>', { noremap = true, silent = true })
 
 
 -- BINDINGS
@@ -123,7 +124,7 @@ function BackgroundToggle()
 	else
 		vim.g.gruvpops_clearbg = 0
 	end
-	vim.cmd("luafile ~/.config/nvim/lua/core/colours.lua")
+	vim.cmd("luafile " .. vim.fn.stdpath('config') .. "/lua/core/colours.lua")
 end
 map('n', '<leader>k', ':lua BackgroundToggle()<CR>', { noremap = true, silent = true })
 
