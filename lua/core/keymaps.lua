@@ -75,10 +75,10 @@ map('n', '<leader>li', ':LspInfo<CR>', { noremap = true, silent = true })
 
 -- BINDINGS
 
--- update Jent config
+-- update JENT config
 function UpdateJent()
 	print("Downloading the latest Jent...")
-	vim.fn.system{'git', '-C', '${XDG_CONFIG_HOME:-$HOME/.config}/nvim', 'pull'}
+	vim.fn.system{'git', '-C', vim.fn.stdpath('config'), 'pull'}
 	require('plugins.packer')
 	require('packer').sync()
 end
