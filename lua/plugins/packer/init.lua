@@ -34,12 +34,11 @@ use {'williamboman/nvim-lsp-installer',
 	config = function() require('plugins.nvim-lsp-installer') end
 }
 use {'hrsh7th/nvim-cmp',-- Autocompletion
-	ft = 'norg',
 	event = 'InsertEnter',
 	config = function() require('plugins.nvim-cmp') end
 }
 use {'hrsh7th/cmp-buffer', after = 'nvim-cmp'}
-use {'hrsh7th/cmp-nvim-lsp', after = 'nvim-cmp'}
+use 'hrsh7th/cmp-nvim-lsp'
 use {'hrsh7th/cmp-path', after = 'nvim-cmp'}
 use {'nvim-treesitter/nvim-treesitter',-- Extended syntax highlighting
 	run = ':TSUpdate',
