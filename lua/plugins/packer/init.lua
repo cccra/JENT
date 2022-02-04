@@ -70,8 +70,9 @@ use {'folke/which-key.nvim',-- Key binding hints
 	config = function() require('plugins.which-key') end
 }
 use { 'nvim-neorg/neorg',
-    config = function() require('plugins.neorg') end,
-    requires = 'nvim-lua/plenary.nvim',
-	after = {'nvim-treesitter', 'nvim-cmp'},
+	ft = 'norg',
+	config = function() require('plugins.neorg') end,
+	requires = 'nvim-lua/plenary.nvim',
+	wants = {'nvim-treesitter', 'nvim-cmp'},
 }
 end)
