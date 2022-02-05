@@ -63,7 +63,7 @@ require("which-key").setup {
 	require("which-key").register({ n = {
     	name = "Neorg",
     	n = "Open Notes",
-    	t = "Open Todo",
+    	d = "Open Todo",
     	},
 	}, { prefix = "<leader>" }),
 

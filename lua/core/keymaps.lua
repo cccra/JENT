@@ -62,7 +62,7 @@ map('n', '<leader>p', ':PackerSync<CR>', { noremap = true, silent = true })
 map('n', '<leader>h', ':ColorizerToggle<CR>', { noremap = true, silent = true })
 -- neorg
 map('n', '<leader>nn', ':e ~/dox/.notes/index.norg<CR>', { noremap = true, silent = true })
-map('n', '<leader>nt', ':e ~/dox/.todo/index.norg<CR>', { noremap = true, silent = true })
+map('n', '<leader>nd', ':e ~/dox/.todo/index.norg<CR>', { noremap = true, silent = true })
 --lsp
 map('n', '<leader>lc', ':lua vim.lsp.buf.hover()<CR>', { noremap = true, silent = true })
 map('n', '<leader>ln', ':lua vim.diagnostic.goto_next()<CR>', { noremap = true, silent = true })
