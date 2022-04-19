@@ -9,56 +9,56 @@ function HelpfulHelp()
 		end
 	end
 end
-vim.cmd("autocmd BufEnter * lua HelpfulHelp()")
+vim.api.nvim_create_autocmd("BufEnter", { pattern = "*", callback = HelpfulHelp })
 
--- resize windows when vim is resized
-vim.cmd("autocmd VimResized * wincmd =")
+-- -- resize windows when vim is resized
+-- vim.api.nvim_create_autocmd("VimResized" { pattern = "*", command = "wincmd =" })
 
 -- Ensure files are read as what I want
-vim.cmd("autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown")
-vim.cmd("autocmd BufRead,BufNewFile *.ms,*.me,*.mom,*.man set filetype=groff")
-vim.cmd("autocmd BufRead,BufNewFile *.tex set filetype=tex")
-vim.cmd("autocmd BufRead,BufNewFile *.norg set filetype=norg")
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, { pattern = {"/tmp/calcurse*", "~/.calcurse/notes/*"},  command = "set filetype=markdown" })
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, { pattern = {"*.ms", "*.me", "*.mom", "*.man"},  command = "set filetype=groff" })
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, { pattern = "*.tex",  command = "set filetype=tex" })
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, { pattern = "*.norg",  command = "set filetype=norg" })
 
 -- Disable line numbers for terminal
-vim.cmd("autocmd TermOpen * setlocal nonumber norelativenumber")
+vim.api.nvim_create_autocmd("TermOpen", { pattern = "*",  command = "setlocal nonumber norelativenumber" })
 
 -- Load snippets
-vim.cmd("autocmd FileType tex lua require('core.snippets.tex') require('plugins.which-key.texkeys')")
-vim.cmd("autocmd FileType html lua require('core.snippets.html') require('plugins.which-key.htmlkeys')")
-vim.cmd("autocmd FileType groff lua require('core.snippets.ms') require('plugins.which-key.groffkeys')")
-vim.cmd("autocmd BufRead *.tex syntax enable")
-vim.cmd("autocmd InsertEnter *.tex set conceallevel=0")
-vim.cmd("autocmd InsertLeave *.tex set conceallevel=2")
+vim.api.nvim_create_autocmd("FileType", { pattern = "tex", command = "lua require('core.snippets.tex') require('plugins.which-key.texkeys')" })
+vim.api.nvim_create_autocmd("FileType", { pattern = "html", command = "lua require('core.snippets.html') require('plugins.which-key.htmlkeys')" })
+vim.api.nvim_create_autocmd("FileType", { pattern = "groff", command = "lua require('core.snippets.ms') require('plugins.which-key.groffkeys')" })
+vim.api.nvim_create_autocmd("BufRead", { pattern = "*.tex",  command = "syntax enable" })
+vim.api.nvim_create_autocmd("InsertEnter", { pattern = "*.tex",  command = "set conceallevel=0" })
+vim.api.nvim_create_autocmd("InsertLeave", { pattern = "*.tex",  command = "set conceallevel=2" })
 
 -- Auto-load my templates for relevant new files
-vim.cmd("autocmd BufNewFile *.tex silent -1read " .. vim.fn.stdpath('config') .. "/templates/article.tex | %foldo | exec search('^\\\\title') | norm $")
-vim.cmd("autocmd BufNewFile *.html silent -1read " .. vim.fn.stdpath('config') .. "/templates/file.html | exec search('title') | norm f<")
-vim.cmd("autocmd BufNewFile *.ms,*.me,*.mom,*.man silent -1read " .. vim.fn.stdpath('config') .. "/templates/article.ms | norm 2j")
+vim.api.nvim_create_autocmd("BufNewFile", { pattern = "*.tex",  command = "silent -1read " .. vim.fn.stdpath('config') .. "/templates/article.tex | exec search('^\\\\title') | norm $" })
+vim.api.nvim_create_autocmd("BufNewFile", { pattern = "*.html",  command = "silent -1read " .. vim.fn.stdpath('config') .. "/templates/file.html | exec search('title') | norm f<" })
+vim.api.nvim_create_autocmd("BufNewFile", { pattern = {"*.ms", "*.me", "*.mom", "*.man"},  command = "silent -1read " .. vim.fn.stdpath('config') .. "/templates/article.ms | norm 2j" })
 
 -- Automatically deletes all trailing whitespace and blank lines at end of file on save
-vim.cmd("autocmd BufWritePre * %s/\\s\\+$//e")
-vim.cmd("autocmd BufWritePre * %s/\\n\\+\\%$//e")
--- vim.cmd("autocmd BufWritePre *.[ch] %s/\\%$/\\r/e")
+vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*",  command = "%s/\\s\\+$//e" })
+vim.api.nvim_create_autocmd("BufWritePre", { pattern = "*",  command = "%s/\\n\\+\\%$//e" })
+--, vim.api.nvim_create_autocmd("BufWritePre" { pattern = "*.[ch]",  command = "%s/\\%$/\\r/e" })
 
 -- Cleans out tex build files whenever I close out of a .tex file (requires external script)
-vim.cmd("autocmd VimLeave *.tex !texclear %")
+vim.api.nvim_create_autocmd("VimLeave", { pattern = "*.tex",  command = "!texclear %" })
 
 -- Run xrdb whenever Xdefaults or Xresources are updated
-vim.cmd("autocmd BufRead,BufNewFile Xresources,Xdefaults,xresources,xdefaults set filetype=xdefaults")
-vim.cmd("autocmd BufWritePost Xresources,Xdefaults,xresources,xdefaults !xrdb %")
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, { pattern = {"Xresources", "Xdefaults", "xresources", "xdefaults"}, command = "set filetype=xdefaults" })
+vim.api.nvim_create_autocmd("BufWritePost", { pattern = {"Xresources", "Xdefaults", "xresources", "xdefaults"}, command = "!xrdb %" })
 
 -- Run make after editing dwmblocks config.h
-vim.cmd("autocmd BufWritePost ~/.local/src/dwmblocks/config.h !cd ~/.local/src/dwmblocks/;sudo make install && { killall -q dwmblocks;setsid -f dwmblocks }")
+vim.api.nvim_create_autocmd("BufWritePost", { pattern = "~/.local/src/dwmblocks/config.h", command = "!cd ~/.local/src/dwmblocks/;sudo make install && { killall -q dwmblocks;setsid -f dwmblocks }" })
 
 -- Update shortcuts when shortcut files are updated (requires external script)
-vim.cmd("autocmd BufWritePost bm-files,bm-dirs !shortcuts")
+vim.api.nvim_create_autocmd("BufWritePost", { pattern = {"bm-files", "bm-dirs"}, command = "!shortcuts" })
 
 -- Restart dunst when dunstrc updated
-vim.cmd("autocmd BufWritePost dunstrc !killall -q dunst;setsid dunst &")
+vim.api.nvim_create_autocmd("BufWritePost", { pattern = "dunstrc", command = "!killall -q dunst;setsid dunst &" })
 
 -- Recompile packer on save
-vim.cmd("autocmd BufWritePost ~/.config/nvim/lua/plugins/packer/init.lua so | PackerCompile | lua print('Recompiled')")
+vim.api.nvim_create_autocmd("BufWritePost", { pattern = "~/.config/nvim/lua/plugins/packer/init.lua", command = "so | PackerCompile | lua print('Recompiled')" })
 
 -- Disables automatic commenting on newline
-vim.cmd("autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o")
+vim.api.nvim_create_autocmd("FileType", { pattern = "*",  command = "setlocal formatoptions-=c formatoptions-=r formatoptions-=o" })

@@ -33,8 +33,8 @@ map('i', '(', '(<c-g>u', { noremap = true })
 map('i', ')', ')<c-g>u', { noremap = true })
 
 -- Close help and netrw buffer with q
-vim.cmd("autocmd FileType help nnoremap <buffer> q ZQ")
-vim.cmd("autocmd FileType netrw nnoremap <buffer> q ZQ")
+vim.api.nvim_create_autocmd("FileType", { pattern = "help", command = "nnoremap <buffer> q ZQ" })
+vim.api.nvim_create_autocmd("FileType", { pattern = "netrw", command = "nnoremap <buffer> q ZQ" })
 
 -- PLUGIN BINDINGS
 

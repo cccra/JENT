@@ -17,7 +17,7 @@ vim.o.completeopt = 'menuone,preview,noselect,noinsert'
 vim.g.completion_matching_strategy_list = {'exact', 'substring', 'fuzzy'}
 vim.o.ignorecase = true
 vim.o.smartcase = true
-vim.cmd('autocmd TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=200}')
+vim.api.nvim_create_autocmd("TextYankPost", { pattern = "*", command = "silent! lua vim.highlight.on_yank {higroup='IncSearch', timeout=200}'" })
 vim.o.timeoutlen = 400
 vim.o.conceallevel = 2
 vim.o.showmode = false

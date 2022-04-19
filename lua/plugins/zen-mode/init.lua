@@ -20,6 +20,6 @@ require('zen-mode').setup {
 }
 
 -- Enable ZenMode by default for mutt writting
--- autocmd BufRead,BufNewFile /tmp/neomutt* :ZenMode
--- autocmd BufRead,BufNewFile /tmp/neomutt* map ZZ :ZenMode\|x!<CR>
--- autocmd BufRead,BufNewFile /tmp/neomutt* map ZQ :ZenMode\|q!<CR>
+-- vim.api.nvim_create_autocommand({"BufRead", "BufNewFile"}, { pattern = "/tmp/neomutt*", command = "ZenMode" })
+-- vim.api.nvim_create_autocommand({"BufRead", "BufNewFile"}, { pattern = "/tmp/neomutt*", command = "map ZZ :ZenMode\\|x!<CR>" })
+-- vim.api.nvim_create_autocommand({"BufRead", "BufNewFile"}, { pattern = "/tmp/neomutt*", command = "map ZQ :ZenMode\\|q!<CR>" })
