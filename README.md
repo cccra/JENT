@@ -7,6 +7,8 @@ just enough niceties to be easy to work with.
 
 It's made for note-taking, LaTeX editing and a little light coding.
 
+NOTE: requires Neovim version 0.7 or higher.
+
 ## The obligatory GIFs
 ![a gif](https://gitlab.com/cccra/jent/uploads/25fa1034c508617abfe95832f685b1a6/output3.gif)
 
