@@ -45,6 +45,7 @@ pix
 dox/reading/catholic/summa_theologiae
 vid
 not_used
+node_modules
 *.pdf
 *.epub
 *.jpg

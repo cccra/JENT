@@ -1,4 +1,4 @@
-vim.cmd[[filetype indent off]]
+-- vim.cmd[[filetype indent off]]
 vim.o.clipboard = vim.o.clipboard .. 'unnamedplus'
 vim.o.path = vim.o.path .. '**'
 vim.o.tabstop = 2
@@ -6,8 +6,8 @@ vim.o.shiftwidth = 2
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.o.undofile = true
-vim.o.foldmethod = 'marker'
--- vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
+vim.o.foldmethod = 'expr'
+vim.o.foldexpr = 'nvim_treesitter#foldexpr()'
 vim.o.foldlevelstart = 99
 vim.o.linebreak = true
 vim.o.wildmode = 'longest:full'

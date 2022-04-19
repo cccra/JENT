@@ -9,9 +9,9 @@ require('cmp').setup {
 		['<C-e>'] = require('cmp').mapping.close(),
 	},
 	sources = {
+		{ name = 'nvim_lsp' },
 		{ name = 'buffer' },
 		{ name = 'path' },
-		{ name = 'nvim_lsp' },
 		{ name = 'neorg' },
 	},
 }

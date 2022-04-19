@@ -53,6 +53,11 @@ require('neorg').setup {
 							Title = '+Heading6',
 							Prefix = '+Heading6'
 						}
+					},
+					Link = {
+						File = {
+							[""] = '+TSURI'
+						}
 					}
 				}
 			}
