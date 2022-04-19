@@ -193,7 +193,7 @@ highlight('TSEmphasis', nil, nil, 'italic', nil)
 highlight('TSUnderline', nil, nil, 'underline', nil)
 highlight('TSTitle', colors.green, nil, 'bold', nil)
 highlight('TSLiteral', colors.orange, nil, nil, nil)
-highlight('TSURI', colors.orange, nil, nil, nil)
+highlight('TSURI', colors.blue, nil, nil, nil)
 highlight('TSTag', colors.aqua, nil, nil, nil)
 highlight('TSTagDelimiter', colors.fg0, nil, nil, nil)
 --}}}
