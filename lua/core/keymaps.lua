@@ -84,8 +84,8 @@ function UpdateJent()
 end
 map('n', '<leader>j', ':lua UpdateJent()<CR>', { noremap = true, silent = true })
 
--- Change current character changed to ss to avoid vim-sandwich conflict
-map('n', 'ss', 's', { noremap = true })
+-- open terminal in split bellow
+map('n', '<leader>T', ':split | wincmd J | res 10 | term<cr>', { noremap = true })
 
 -- Replace all is aliased to S
 map('n', 'S', ':%s//g<Left><Left>', { noremap = true })

@@ -17,8 +17,8 @@ use {'numToStr/comment.nvim',-- Filetype-aware automatic commenting (gcc)
 	keys = 'gc',
 	config = function() require('Comment').setup() end
 }
-use {'machakann/vim-sandwich',-- Quickly surround text objects with parentheses, etc.
-	keys = 's'
+use {'tpope/vim-surround',-- Quickly surround text objects with parentheses, etc.
+	-- keys = {'ds', 'cs', 'ys'}
 }
 use {'RRethy/vim-illuminate',-- highlight matching parentheses
 	ft = {'python', 'sh', 'bash', 'tex', 'lua', 'css', 'html', 'cpp'},
