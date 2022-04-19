@@ -60,6 +60,8 @@ require("which-key").setup {
     	},
 	}, { prefix = "<leader>" }),
 
+	require("which-key").register({ T = "Open terminal window" }, { prefix = "<leader>" }),
+
 	require("which-key").register({ n = {
     	name = "Neorg",
     	n = "Open Notes",
