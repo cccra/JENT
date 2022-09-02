@@ -1,0 +1,1 @@
+../../.local/src/dotfiles/configs/.config/nvim/lua
