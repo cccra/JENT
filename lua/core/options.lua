@@ -7,10 +7,11 @@ g.toggle_theme_icon = "   "
 g.transparency = config.ui.transparency
 g.theme_switcher_loaded = false
 
-opt.laststatus = 3 -- global statusline
+opt.laststatus = 1 -- global statusline
 opt.showmode = false
+opt.showcmd = false
 
-opt.clipboard = "unnamedplus"
+opt.clipboard:append "unnamedplus"
 opt.cursorline = true
 
 -- Indenting
@@ -27,19 +28,22 @@ opt.mouse = "a"
 
 -- Numbers
 opt.number = true
+opt.relativenumber = true
 opt.numberwidth = 2
-opt.ruler = false
+
+-- Set the content of the statusline
+opt.statusline = ' %<%f %r %m %= %y %3.3p%% %3.3c%( %)'
+-- Set the content of the ruler
+opt.rulerformat = '%#Comment#%= %r %m %3.3p%% %3.3c'
 
 -- disable nvim intro
 opt.shortmess:append "sI"
 
 opt.signcolumn = "yes"
-opt.splitbelow = true
-opt.splitright = true
 opt.termguicolors = true
 opt.timeoutlen = 400
 opt.undofile = true
-opt.undodir = "$XDG_CACHE_HOME/nvim/undo//"
+opt.undodir = { "/home/gus/.cache/nvim/undo//" }
 
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
@@ -47,6 +51,22 @@ opt.updatetime = 250
 -- go to previous/next line with h,l,left arrow and right arrow
 -- when cursor reaches end/beginning of line
 opt.whichwrap:append "<>[]hl"
+opt.linebreak = true
+
+-- enable treesitter folding
+opt.foldmethod = 'expr'
+opt.foldexpr = 'nvim_treesitter#foldexpr()'
+opt.foldlevelstart = 99
+
+-- selection menus
+opt.wildmode = 'longest:full'
+opt.completeopt = 'menuone,preview,noselect,noinsert'
+-- vim.opt_global.completion_matching_strategy_list = { 'exact', 'substring', 'fuzzy' }
+
+opt.conceallevel = 2
+opt.hlsearch = false
+opt.title = true
+opt.titleold = 'st'
 
 g.mapleader = " "
 

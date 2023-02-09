@@ -85,33 +85,32 @@ local plugins = {
     end,
   },
 
-  -- git stuff
-  ["lewis6991/gitsigns.nvim"] = {
-    ft = "gitcommit",
-    setup = function()
-      require("core.lazy_load").gitsigns()
-    end,
-    config = function()
-      require("plugins.configs.others").gitsigns()
-    end,
-  },
-
   -- lsp stuff
   ["williamboman/mason.nvim"] = {
-    cmd = require("core.lazy_load").mason_cmds,
-    config = function()
-      require "plugins.configs.mason"
-    end,
+    -- cmd = require("core.lazy_load").mason_cmds,
+    -- config = function()
+    --   require "plugins.configs.mason"
+    -- end,
+  },
+
+  ["williamboman/mason-lspconfig.nvim"] = {
+    -- after = "mason.nvim"
   },
 
   ["neovim/nvim-lspconfig"] = {
-    opt = true,
-    setup = function()
-      require("core.lazy_load").on_file_open "nvim-lspconfig"
-    end,
+    -- opt = true,
+    -- setup = function()
+    --   require("core.lazy_load").on_file_open "nvim-lspconfig"
+    -- end,
+    -- after = "mason-lspconfig.nvim",
+  },
+
+  ["VonHeikemen/lsp-zero.nvim"] = {
+
     config = function()
       require "plugins.configs.lspconfig"
     end,
+
   },
 
   -- load luasnips + cmp related in insert mode only
@@ -150,14 +149,6 @@ local plugins = {
     end,
   },
 
-  ["goolord/alpha-nvim"] = {
-    after = "base46",
-    disable = true,
-    config = function()
-      require "plugins.configs.alpha"
-    end,
-  },
-
   ["numToStr/Comment.nvim"] = {
     module = "Comment",
     keys = { "gc", "gb" },
@@ -171,7 +162,6 @@ local plugins = {
 
   -- file managing , picker etc
   ["nvim-tree/nvim-tree.lua"] = {
-    ft = "alpha",
     cmd = { "NvimTreeToggle", "NvimTreeFocus" },
     config = function()
       require "plugins.configs.nvimtree"
@@ -193,7 +183,7 @@ local plugins = {
 
   -- Only load whichkey after all the gui
   ["folke/which-key.nvim"] = {
-    disable = true,
+    disable = false,
     module = "which-key",
     keys = { "<leader>", '"', "'", "`" },
     config = function()
@@ -203,6 +193,44 @@ local plugins = {
       require("core.utils").load_mappings "whichkey"
     end,
   },
+
+    -- Manage git
+  ["TimUntersberger/neogit"] = {
+    cmd = "Neogit",
+    config = function()
+      require("plugins.configs.others").neogit()
+    end,
+    setup = function()
+      require("core.utils").load_mappings "neogit"
+    end,
+  },
+
+  -- Manipulate surrounding stuff
+  ["tpope/vim-surround"] = {
+		keys = {"ds", "cs", "ys"}
+  },
+
+   -- Graphical undo
+	["mbbill/undotree"] = {
+		cmd = "UndotreeToggle",
+    setup = function()
+      require("core.utils").load_mappings "undotree"
+    end,
+	},
+
+  -- Notes
+  ["nvim-neorg/neorg"] = {
+    cmd = "Neorg",
+		requires = "nvim-lua/plenary.nvim",
+		ft = "norg",
+		config = function()
+      require("plugins.configs.neorg")
+    end,
+    setup = function()
+      require("core.utils").load_mappings "neorg"
+    end,
+	},
+
 }
 
 -- Load all plugins

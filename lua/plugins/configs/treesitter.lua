@@ -8,7 +8,16 @@ require("base46").load_highlight "treesitter"
 
 local options = {
   ensure_installed = {
+    "help",
     "lua",
+    "latex",
+    "bibtex",
+    "bash",
+    "python",
+    "cpp",
+    "html",
+    "css",
+    "comment",
   },
 
   highlight = {

@@ -5,16 +5,20 @@ if not present then
 end
 
 require("base46").load_highlight "lsp"
-require "nvchad_ui.lsp"
+-- require "nvchad_ui.lsp"
 
 local M = {}
 local utils = require "core.utils"
 
+local lsp = require('lsp-zero')
+lsp.preset('recommended')
+lsp.setup()
+
 -- export on_attach & capabilities for custom lspconfigs
 
 M.on_attach = function(client, bufnr)
-  client.server_capabilities.documentFormattingProvider = false
-  client.server_capabilities.documentRangeFormattingProvider = false
+  client.server_capabilities.documentFormattingProvider = true
+  client.server_capabilities.documentRangeFormattingProvider = true
 
   utils.load_mappings("lspconfig", { buffer = bufnr })
 
